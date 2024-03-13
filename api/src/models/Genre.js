@@ -8,12 +8,16 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       autoincrement: true,
-      primaryKey:true,
+      primaryKey: true,
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
+    },
+    videogames: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
   });
 };

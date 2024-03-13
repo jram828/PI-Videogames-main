@@ -5,7 +5,7 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define("videogame", {
     id: {
-      type: DataTypes.UUIDV4,
+      type: DataTypes.INTEGER,
       allowNull: false,
       unique: true,
       primaryKey: true,
@@ -32,8 +32,12 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     rating: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT,
       allowNull: false,
     },
+    idGenre: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    }
   });
 };
